@@ -12,15 +12,18 @@ import { useSelector } from "react-redux"
 import uuid from "react-uuid"
 import { ShoppingCart_ActionType } from "../components/redux/action/actionType"
 import store from "../components/redux/store/store"
+import { useDispatch } from "react-redux"
 
 const ShoppingCart = () => {
 
     const shoppCartList = useSelector((state: any) => state.shoppingCart_reducer.cartList)
     console.log(shoppCartList)
 
+    const dispatch = useDispatch();
+
     const deleteItem = (index: number) => {
         console.log("deleteItem")
-        store.dispatch({ type: ShoppingCart_ActionType.DELETE_FROM_CART, payload: index })
+        dispatch({ type: ShoppingCart_ActionType.DELETE_FROM_CART, payload: index })
     }
 
     return (
