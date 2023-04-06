@@ -29,6 +29,11 @@ const shoppingCartAdv = () => {
         console.log("minus_one")
         dispatch({ type: ShoppingCart_ActionTypeV2.MINUS_ONE_TO_CART_V2, payload: index })
     }
+    // DELETE_FROM_CART_V2
+    const delete_from_cart = (index: number) => {
+        console.log("delete_from_cart")
+        dispatch({ type: ShoppingCart_ActionTypeV2.DELETE_FROM_CART_V2, payload: index })
+    }
 
     return (
         <Layout>
@@ -85,6 +90,7 @@ const shoppingCartAdv = () => {
                         </div>
                         <button className="bg-blue-500 hover:bg-blue-700 text-white font-bold rounded px-5 py-2 mt-2 mx-2" onClick={() => add_one(index)}>+</button>
                         <button className="bg-blue-500 hover:bg-blue-700 text-white font-bold rounded px-5 py-2 mt-2 mx-2" onClick={() => minus_one(index)}>-</button>
+                        <button className="bg-blue-500 hover:bg-blue-700 text-white font-bold rounded px-5 py-2 mt-2 mx-2" onClick={() => delete_from_cart(index)}>刪除</button>
                     </div>
                 )
             })}
