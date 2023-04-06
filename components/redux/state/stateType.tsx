@@ -7,7 +7,6 @@ export const initialState: Todo_State = {
 }
 
 // shopping cart
-
 export type ShoppingCartItem = {
     name: string;
     price: number;
@@ -19,4 +18,21 @@ export type ShoppingCart_State = {
 
 export const initialShoppingCartState: ShoppingCart_State = {
     cartList: []
+}
+
+
+//////////////////////////////////////////////////////////////// 
+// shopping cart V2
+export type ShoppingCartItemV2 = {
+    name: string;
+    price: number;
+    count: number;
+}
+
+export type ShoppingCart_StateV2 = {
+    cartList: ShoppingCartItemV2[];
+}
+
+export const initialShoppingCartStateV2: ShoppingCart_StateV2 = {
+    cartList: [],
 }

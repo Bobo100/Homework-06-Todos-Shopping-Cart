@@ -38,8 +38,8 @@ function HomePage() {
                 </h1>
 
                 <div className="m-1">
-                    <input type="text" className="border-2 border-black m-1" placeholder="想做甚麼" onChange={handleOnChange} />
-                    <button className="border-2 border-black m-1" onClick={addTodo}>Add</button>
+                    <input type="text" className="border-2 border-black m-1 text-black" placeholder="想做甚麼" onChange={handleOnChange} />
+                    <button className="border-2 border-white m-1 p-1" onClick={addTodo}>Add</button>
                 </div>
                 {todoList &&
                     todoList.map((item: any, index: number) => {
@@ -47,7 +47,7 @@ function HomePage() {
                             <div key={uuid()} className="m-1">
                                 <input type="checkbox" className="m-1" placeholder="check" />
                                 <span className="m-1">{item}</span>
-                                <button className="border-2 border-black m-1" onClick={() => deleteTodo(index)}>Delete</button>
+                                <button className="border-2 border-white m-1 p-1" onClick={() => deleteTodo(index)}>Delete</button>
                             </div>
                         )
                     })

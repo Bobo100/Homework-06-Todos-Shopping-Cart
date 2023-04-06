@@ -8,11 +8,12 @@ import poster03 from "../public/images/poster-03.jpg"
 import poster04 from "../public/images/poster-04.jpg"
 import poster05 from "../public/images/poster-05.jpg"
 import AddButton from "../components/shoppingCart/addButton"
-import { useSelector } from "react-redux"
+
+import { useSelector, useDispatch } from "react-redux"
+
 import uuid from "react-uuid"
 import { ShoppingCart_ActionType } from "../components/redux/action/actionType"
 import store from "../components/redux/store/store"
-import { useDispatch } from "react-redux"
 
 const ShoppingCart = () => {
 
@@ -36,27 +37,27 @@ const ShoppingCart = () => {
                 <div className="box-border text-center w-64">
                     <Image src={poster01} alt="poster01" height={250} className="m-1 inline" />
                     <p>捍衛任務4</p>
-                    <AddButton name="捍衛任務4" price={1000} />
+                    <AddButton name="捍衛任務4" price={680} />
                 </div>
                 <div className="box-border text-center w-64">
                     <Image src={poster02} alt="poster02" height={250} className="m-1 inline" />
                     <p>超級瑪利歐兄弟電影版</p>
-                    <AddButton name="超級瑪利歐兄弟電影版" price={1000} />
+                    <AddButton name="超級瑪利歐兄弟電影版" price={500} />
                 </div>
                 <div className="box-border text-center w-64">
                     <Image src={poster03} alt="poster03" height={250} className="m-1 inline" />
                     <p>鈴芽之旅</p>
-                    <AddButton name="鈴芽之旅" price={1000} />
+                    <AddButton name="鈴芽之旅" price={650} />
                 </div>
                 <div className="box-border text-center w-64">
                     <Image src={poster04} alt="poster04" height={250} className="m-1 inline" />
                     <p>名偵探柯南 灰原哀物語~黑鐵的神祕列車~</p>
-                    <AddButton name="名偵探柯南 灰原哀物語~黑鐵的神祕列車~" price={1000} />
+                    <AddButton name="名偵探柯南 灰原哀物語~黑鐵的神祕列車~" price={550} />
                 </div>
                 <div className="box-border text-center w-64">
                     <Image src={poster05} alt="poster05" height={250} className="m-1 inline" />
                     <p>魔女宅急便</p>
-                    <AddButton name="魔女宅急便" price={1000} />
+                    <AddButton name="魔女宅急便" price={350} />
                 </div>
             </div>
 

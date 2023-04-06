@@ -23,3 +23,17 @@ export interface ShoppingCart_Action {
     type: ShoppingCart_ActionType;
     payload: any;
 }
+
+// shopping cart V2
+export enum ShoppingCart_ActionTypeV2 {
+    ADD_TO_CART_V2 = 'ADD_TO_CART_V2',
+    DELETE_FROM_CART_V2 = 'DELETE_FROM_CART_V2',
+    ADD_ONE_TO_CART_V2 = 'ADD_ONE_TO_CART_V2',
+    MINUS_ONE_TO_CART_V2 = 'MINUS_ONE_TO_CART_V2',
+    CLEAR_CART_V2 = 'CLEAR_CART_V2',
+}
+
+export interface ShoppingCart_ActionV2 {
+    type: ShoppingCart_ActionTypeV2;
+    payload: any;
+}
