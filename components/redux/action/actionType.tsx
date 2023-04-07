@@ -2,7 +2,7 @@
 export enum Todo_ActionType {
     ADD_TODO = 'ADD_TODO',
     DELETE_TODO = 'DELETE_TODO',
-    EDIT_TODO = 'EDIT_TODO',
+    CHECK_TODO = 'CHECK_TODO',
 }
 
 export interface Todo_Action {

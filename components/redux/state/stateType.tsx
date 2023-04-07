@@ -1,9 +1,19 @@
 export type Todo_State = {
-    toDoList: string[];
+    id: number;
+    toDoItem: string;
+    isDone: boolean;
 }
 
-export const initialState: Todo_State = {
-    toDoList: []
+export type Todo_State_List = {
+    toDoList: Todo_State[];
+}
+
+export const initialState: Todo_State_List = {
+    toDoList: [
+        { id: 0, toDoItem: "Learn React", isDone: true },
+        { id: 1, toDoItem: "Learn Redux", isDone: false },
+        { id: 2, toDoItem: "Learn Redux-Toolkit", isDone: false },
+    ],
 }
 
 // shopping cart

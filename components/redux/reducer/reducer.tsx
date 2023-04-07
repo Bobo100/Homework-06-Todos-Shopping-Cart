@@ -1,9 +1,10 @@
 import { ShoppingCart_Action, ShoppingCart_ActionType, ShoppingCart_ActionTypeV2, ShoppingCart_ActionV2, Todo_Action, Todo_ActionType } from "../action/actionType";
-import { ShoppingCart_State, ShoppingCart_StateV2, Todo_State, initialShoppingCartState, initialShoppingCartStateV2, initialState } from "../state/stateType";
+import { ShoppingCart_State, ShoppingCart_StateV2, Todo_State_List, initialShoppingCartState, initialShoppingCartStateV2, initialState } from "../state/stateType";
 
 // Next.js中 需要幫state加上一個初始化值
-export function todo_reducer(state: Todo_State = initialState, action: Todo_Action) {
+export function todo_reducer(state: Todo_State_List = initialState, action: Todo_Action) {
     const { type, payload } = action;
+    console.log(payload)
     switch (type) {
         case Todo_ActionType.ADD_TODO:
             return {
@@ -13,12 +14,12 @@ export function todo_reducer(state: Todo_State = initialState, action: Todo_Acti
         case Todo_ActionType.DELETE_TODO:
             return {
                 ...state,
-                toDoList: state.toDoList.filter((todo, index) => index !== payload)
+                toDoList: state.toDoList.filter((todo, index) => todo.id !== payload)
             };
-        case Todo_ActionType.EDIT_TODO:
+        case Todo_ActionType.CHECK_TODO:
             return {
                 ...state,
-                toDoList: state.toDoList.map((todo, index) => index === payload.index ? payload.todo : todo)
+                toDoList: state.toDoList.map((todo, index) => todo.id === payload ? { ...todo, isDone: !todo.isDone } : todo)
             };
         default:
             return state;
